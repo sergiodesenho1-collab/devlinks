@@ -20,7 +20,7 @@
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --hignlight-color: rgba(0, 0, 0 0.2);
+  --hignlight-color: rgba(0, 0, 0, 0.2);
   --switch-br-url: url(/assets/sun.svg);
 }
 
@@ -83,7 +83,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 
-  animation: slide-back 0.2s;
+  transition: left 0.2s ease;
+}
+
+.light #switch button {
+  left: 32px;
 }
 
 .light #switch button:hover {
@@ -178,15 +182,15 @@ footer {
   from {
     left: 0;
   }
-  top {
+  to {
     left: 50%;
   }
 }
 @keyframes slide-back {
-  fron {
+  from {
     left: 50%;
   }
-  top {
+  to {
     left: 0;
   }
 }
